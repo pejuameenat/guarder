@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+// import { useRef, useState, useEffect } from "react";
 import Header from "./Header";
 import Home from "./Home";
 import About from "./About";
@@ -9,24 +10,26 @@ import Guard from "./Guard";
 import Footer from "./Footer";
 
 //TODO INTERSECTION OBSERVER API
-function observerFunc(entries, observer){
-  const [entry] = entries
-  if(!entry.isIntersecting)return;
-    entry.target.classList.remove('section--hidden')
-    observer.unobserve(entry.target)
+// function observerFunc(entries, observer){
+//   const [entry] = entries
+//   if(!entry.isIntersecting)return;
+//     entry.target.classList.remove('section--hidden')
+//     observer.unobserve(entry.target)
   
-}
-  const sectionObserver = new IntersectionObserver(observerFunc, {
-    root: null, 
-    threshold:0.15
-   })
-   const allSections = document.querySelectorAll('.section')
-   allSections.forEach(function(section){
-    sectionObserver.observe(section)
-    section.classList.add('section--hidden')
-   })
+// }
+//   const sectionObserver = new IntersectionObserver(observerFunc, {
+//     root: null, 
+//     threshold:0.15
+//    })
+//    const allSections = document.querySelectorAll('.section')
+//    allSections.forEach(function(section){
+//     sectionObserver.observe(section)
+//     section.classList.add('section--hidden')
+//    })
   
 function App() {
+    
+  
   return (
     <div className="app">
       <Header />
