@@ -1,18 +1,16 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
  
-//smmoth scrolling for the buttons
 
+//smmoth scrolling for the buttons
 // SLIDER
+function Home(){
     let counter = 1;
     setInterval(function(){
     document.getElementById(`radio${counter}`).checked = true;
     counter++
     if(counter > 3) counter = 1
     }, 3000)
- 
-  
-function Home(){
     return (
         <section id='home'>
             <NavBar />
