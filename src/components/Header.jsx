@@ -3,9 +3,7 @@ import email from '../assets/email.png'
 import placeholder from '../assets/placeholder.png'
 import telephone from '../assets/telephone.png'
 
-
-
-function Header(){
+export default function Header(){
     return( 
         <header>
            <div className="header-wrapper">
@@ -25,5 +23,3 @@ function Header(){
     </header>
     );
 }
-
-export default Header;

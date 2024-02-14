@@ -11,6 +11,7 @@ function Home(){
     counter++
     if(counter > 3) counter = 1
     }, 3000)
+    
     return (
         <section id='home'>
             <NavBar />

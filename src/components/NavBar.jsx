@@ -1,26 +1,22 @@
-import React from "react";
+import React  from "react";
 import icon from "../assets/icon-hamburger.svg";
 
 //TODO implement smooth scrolling
 //responsive navbar
-
-function mobileNav() {
-    const logo = document.querySelector('.logo')
-    logo.classList.toggle('logo-position')
-    const menu = document.querySelector('.icon-ham')
-    menu.classList.toggle('menu-position')
-    const ul = document.querySelector(".nav-lists");
-    ul.classList.toggle('ul-class')
-    ul.classList.toggle("hide");
-}
+ 
 function NavBar() {
+  function mobileNav() {
+    document.querySelector('.nav-lists').classList.toggle('hide')
+  }
   return (
     <div className="nav-wrapper">
-      <a href="index.html" className="logo">
-        Guarder
-      </a>
-      <nav className="nav">
-        <img src={icon} onClick={mobileNav} className="icon-ham" alt="" />
+      <div className="logo-menu-wrapper">
+        <a href="index.html" className="logo">
+          Guarder
+        </a>
+        <img src={icon} className="icon-ham" alt="icon" onClick={mobileNav} />
+      </div>
+      <nav className='nav'>
         <ul className="nav-lists hide">
           <li className="nav-list">
             <a href="#home" className="nav-link">
@@ -50,7 +46,7 @@ function NavBar() {
         </ul>
       </nav>
     </div>
-  );
+  )
 }
 
 export default NavBar;

@@ -9,7 +9,6 @@ import Guard from "./Guard";
 import Footer from "./Footer";
 
 //TODO INTERSECTION OBSERVER API
-  
 function App() {
   useEffect(() => {
     function observerFunc(entries, observer) {
