@@ -1,6 +1,6 @@
 import React from 'react';
 import Guards from './Guards';
-import information from '../info';
+import {information} from '../info';
 
 
 function guardArr(guard){

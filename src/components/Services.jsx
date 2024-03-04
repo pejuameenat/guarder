@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card'
-import information from '../info';
+import {information} from '../info';
 
 
 function infoArrs(infoArr){

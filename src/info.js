@@ -5,7 +5,7 @@ import t1 from './assets/t1.jpg';
 import t2 from './assets/t2.jpg';
 import t3 from './assets/t3.jpg'
 
-const information = [
+export const information = [
   {
     id: 1,
     imgURL: homeIcon,
@@ -42,7 +42,29 @@ const information = [
   },
 ];
 
-export default information;
+export const slides = [
+  {
+    h1: ' YOUR SAFETY',
+    span: 'OUR RESPONSIBILTY',
+    p: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Cupiditate, tempora at expedita dolorem consequuntur dolore dolorum id ducimus similique perferendis.',
+    button1: 'READ MORE',
+    button2: 'GET A QUOTE',
+  },
+  {
+    h1: ' YOUR SAFETY',
+    span: 'OUR RESPONSIBILTY',
+    p: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Cupiditate, tempora at expedita dolorem consequuntur dolore dolorum id ducimus similique perferendis.',
+    button1: 'READ MORE',
+    button2: 'GET A QUOTE',
+  },
+  {
+    h1: ' YOUR SAFETY',
+    span: 'OUR RESPONSIBILTY',
+    p: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Cupiditate, tempora at expedita dolorem consequuntur dolore dolorum id ducimus similique perferendis.',
+    button1: 'READ MORE',
+    button2: 'GET A QUOTE',
+  }
+]
 
 
  

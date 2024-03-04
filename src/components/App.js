@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import Header from "./Header";
 import Home from "./Home";
 import About from "./About";
@@ -10,6 +10,17 @@ import Footer from "./Footer";
 
 //TODO INTERSECTION OBSERVER API
 function App() {
+  const [show, setShow] = useState(false)
+  
+  // const [count, setCount] = useState(1)
+  // const [isChecked, setIschecked] useState()
+
+   function mobileNav() {
+    if(window.innerWidth < 768){
+      setShow((prevShow)=> !prevShow)
+    }
+   }
+  
   useEffect(() => {
     function observerFunc(entries, observer) {
       const [entry] = entries;
@@ -39,7 +50,10 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <Home />
+      <Home
+        show={show}
+        mobileNav={mobileNav}
+      />
       <About />
       <Services />
       <Carousel />
@@ -47,7 +61,7 @@ function App() {
       <Guard />
       <Footer />
     </div>
-  );
+  )
 }
 
 export default App;

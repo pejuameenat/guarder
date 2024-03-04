@@ -4,20 +4,17 @@ import icon from "../assets/icon-hamburger.svg";
 //TODO implement smooth scrolling
 //responsive navbar
  
-function NavBar() {
-  function mobileNav() {
-    document.querySelector('.nav-lists').classList.toggle('hide')
-  }
+function NavBar(props) {
   return (
     <div className="nav-wrapper">
       <div className="logo-menu-wrapper">
         <a href="index.html" className="logo">
           Guarder
         </a>
-        <img src={icon} className="icon-ham" alt="icon" onClick={mobileNav} />
+        <img src={icon} className="icon-ham" alt="icon menu" onClick={props.mobileNav} />
       </div>
       <nav className='nav'>
-        <ul className="nav-lists hide">
+        <ul className={props.show? "nav-lists" : "nav-lists hide"}>
           <li className="nav-list">
             <a href="#home" className="nav-link">
               Home
