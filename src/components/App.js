@@ -12,9 +12,6 @@ import Footer from "./Footer";
 function App() {
   const [show, setShow] = useState(false)
   
-  // const [count, setCount] = useState(1)
-  // const [isChecked, setIschecked] useState()
-
    function mobileNav() {
     if(window.innerWidth < 768){
       setShow((prevShow)=> !prevShow)
