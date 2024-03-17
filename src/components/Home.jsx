@@ -10,19 +10,24 @@ function Home(props) {
   const [selectedOption, setSelectedOption] = useState({
     radioBtn: 0,
   })
+  function checkIndex(index) {
+   const newIndex = index >= slides.length - 1 ? 0 : index + 1
+   return newIndex
+  }
   useEffect(() => {
-    setInterval(function () {
-      setIndex((prevIdex) => (prevIdex >= slides.length - 1 ? 0 : prevIdex + 1))
+    let intervalID = setInterval(function () {
+      setIndex(prevIdex => checkIndex(prevIdex))
     }, 3000)
+    return ()=> clearInterval(intervalID)
   }, [])
 
   const style = {
     transform:
-      index === 1
+      index === 0
         ? `translateX(${0}%)`
-        : index === 2
+        : index === 1
         ? `translateX(${-100}%)`
-        : index === 3
+        : index === 2
         ? `translateX(${-200}%)`
         : '',
   }
@@ -30,7 +35,7 @@ function Home(props) {
   function handleChange(e) {
     const { name, value } = e.target
     setSelectedOption((prevOpt) => ({ ...prevOpt, [name]: Number(value) }))
-    setIndex((prevIdex) => (prevIdex > slides.length - 1 ? 0 : prevIdex + 1))
+    setIndex(prevIdex =>checkIndex(prevIdex))
   }
 
   return (
