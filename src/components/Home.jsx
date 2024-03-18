@@ -34,7 +34,7 @@ function Home(props) {
 
   function handleChange(e) {
     const { name, value } = e.target
-    setSelectedOption((prevOpt) => ({ ...prevOpt, [name]: Number(value) }))
+    setSelectedOption((prevOpt) => ({ ...prevOpt, [name]: Number(value)}))
     setIndex(prevIdex =>checkIndex(prevIdex))
   }
 

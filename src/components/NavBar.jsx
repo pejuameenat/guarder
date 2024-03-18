@@ -2,8 +2,6 @@ import React  from "react";
 import icon from "../assets/icon-hamburger.svg";
 
 //TODO implement smooth scrolling
-//responsive navbar
- 
 function NavBar(props) {
   return (
     <div className="nav-wrapper">
