@@ -11,7 +11,6 @@ import Footer from "./Footer";
 //TODO INTERSECTION OBSERVER API
 function App() {
   const [show, setShow] = useState(false)
-  
    function mobileNav() {
     if(window.innerWidth < 768){
       setShow((prevShow)=> !prevShow)
@@ -54,7 +53,7 @@ function App() {
       <About />
       <Services />
       <Carousel />
-      <Contact />
+      <Contact/>
       <Guard />
       <Footer />
     </div>
