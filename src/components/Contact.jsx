@@ -3,30 +3,30 @@ import React, { useRef } from 'react';
 // TODOform validation
  
 function Contact(){
-  const myRef = useRef(null)
-  console.log(myRef.current.children)
+  // const myRef = useRef(null)
+  // console.log(myRef.current.children)
   function formValidation(e) {
     e.preventDefault()
-    myRef.current.children.map(child=>{
-      if (
-        (child === 'input' && child.value !== '') ||
-        (child === 'textarea' && child.value !== '')
-      ) {
-        child.value.toLowerCase()
-        child.style.border = '2px solid #f00'
-      }
-      //bug
-      if (child.value !== '') return
-      const em = document.querySelector('.em-class')
-      em.classList.remove('hide')
-    })
+    // myRef.current.children.map(child=>{
+    //   if (
+    //     (child === 'input' && child.value !== '') ||
+    //     (child === 'textarea' && child.value !== '')
+    //   ) {
+    //     child.value.toLowerCase()
+    //     child.style.border = '2px solid #f00'
+    //   }
+    //   //bug
+    //   if (child.value !== '') return
+    //   const em = document.querySelector('.em-class')
+    //   em.classList.remove('hide')
+    // })
   }
 return (
   <section className="section" id="contact">
     <div className="container container2">
       <h2 className="common-h2">GET IN TOUCH</h2>
       <form onSubmit={formValidation}>
-        <div className="form-wrapper" ref={myRef}>
+        <div className="form-wrapper" >
           <input type="text" placeholder="Full Name" required />
           <input type="email" placeholder="Email" required />
           <input type="text" placeholder="Phone Number" required />
