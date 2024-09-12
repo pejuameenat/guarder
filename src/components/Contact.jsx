@@ -16,8 +16,8 @@ function Contact(){
       ) {
         child.value.toLowerCase()
         child.style.border = '2px solid #f00'
+        return
       }
-      //bug
       if(child.value !== '') return
       emRef.current.classList.remove('hide')
     })
